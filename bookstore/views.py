@@ -1,12 +1,16 @@
 from django.shortcuts import render
-
+from .models import Book
 
 # Create your views here.
 def firstdefination(request):
     return render(request, "FirstHtml.html")
 
 def store(request):
-    return render(request,"Store.html")
+    count= Book.objects.all().count()
+    context = {
+      "count" : count,
+    }
+    return render(request,"Store.html",context)
 
 
 def fiction(request):
