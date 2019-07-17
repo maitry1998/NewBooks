@@ -24,7 +24,7 @@ SECRET_KEY = '-*vi4l^x#a3%en^rev1%tc@grwb$%8=#!7n!7rd_q(5-!*gkaa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=False
 ALLOWED_HOSTS = []
 
 
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'registration',
     'bookstore',
 ]
-
+INCLUDE_REGISTER_URL = True
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
