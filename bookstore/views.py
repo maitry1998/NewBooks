@@ -10,6 +10,9 @@ def store(request):
     context = {
       "count" : count,
     }
+    request.session['location'] ="unknown"
+    if request.user.is_authenticated:
+        request.session['location'] = "unknown"
     return render(request,"Store.html",context)
 
 

@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.firstdefination),
     path('bookstore/' , include('bookstore.urls' ), name="bookstore"),
-    path('accounts/' , include('registration.backends.default.urls' ))
+    path('accounts/' , include('registration.backends.default.urls' )),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
 
 ]

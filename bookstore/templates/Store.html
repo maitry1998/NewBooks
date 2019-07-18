@@ -13,10 +13,12 @@
         {% endif %}!
     </h4>
 {% else %}
+Welcome mysterious person
+<a href="{% url 'auth_login' %}">Logout</a>
 {% endif %}
-
 Welcome to the Mysterious world!! There are {{count}} books in stock.
+User Location : {{ request.session.location }}
 <a href="{% url 'auth_logout' %}">Logout</a>
-
 </body>
 </html>
+
