@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-This is Store  . There are {{ count }} number of books.
+{% if request.user.is_authenticated %}
+    <h4>Welcome, {% if request.user.first_name %}
+        {{request.user.first_name}}
+        {% else %}
+        {{request.user.username}}
+        {% endif %}!
+    </h4>
+{% else %}
+Welcome mysterious person
+<a href="{% url 'auth_login' %}">Logout</a>
+{% endif %}
+Welcome to the Mysterious world!! There are {{count}} books in stock.
+User Location : {{ request.session.location }}
+<a href="{% url 'auth_logout' %}">Logout</a>
 </body>
 </html>
+

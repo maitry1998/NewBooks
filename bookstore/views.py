@@ -10,8 +10,15 @@ def store(request):
     context = {
       "count" : count,
     }
+    request.session['location'] ="unknown"
+    if request.user.is_authenticated:
+        request.session['location'] = "unknown"
     return render(request,"Store.html",context)
 
 
 def fiction(request):
-    return render(request,"fiction.html")
+    return render(request,"/fiction.html")
+
+
+
+
