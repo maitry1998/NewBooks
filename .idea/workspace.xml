@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d7aa6b4-fa5e-4932-9bee-80393bb40615" name="Default Changelist" comment="master">
-      <change afterPath="$PROJECT_DIR$/bookstore/static/base/img/header_full.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore/static/base/img/header_mobile.jpg" afterDir="false" />
+    <list default="true" id="6d7aa6b4-fa5e-4932-9bee-80393bb40615" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/Store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewBooks/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewBooks/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookstore/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/activate.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/activate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/activation_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/activation_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/registration_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/registration_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/templates/registration/registration_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/templates/registration/registration_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookstore/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +18,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bookstore/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+            <state relative-caret-position="187">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewBooks/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="163" column="70" selection-start-line="163" selection-start-column="70" selection-end-line="163" selection-end-column="70" />
+            <state relative-caret-position="306">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -115,9 +115,7 @@
         <option value="$PROJECT_DIR$/bookstore/templates/registration/activation_email.txt" />
         <option value="$PROJECT_DIR$/bookstore/templates/registration/activation_email_subject.txt" />
         <option value="$PROJECT_DIR$/../../env/NewBooks-django/Lib/site-packages/registration/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/NewBooks/urls.py" />
-        <option value="$PROJECT_DIR$/NewBooks/settings.py" />
         <option value="$PROJECT_DIR$/bookstore/templates/Store.html" />
         <option value="$PROJECT_DIR$/bookstore/templates/registration/activate.html" />
         <option value="$PROJECT_DIR$/bookstore/templates/registration/activation_complete.html" />
@@ -126,6 +124,8 @@
         <option value="$PROJECT_DIR$/bookstore/templates/registration/registration_form.html" />
         <option value="$PROJECT_DIR$/bookstore/views.py" />
         <option value="$PROJECT_DIR$/bookstore/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/NewBooks/settings.py" />
         <option value="$PROJECT_DIR$/bookstore/templates/base.html" />
       </list>
     </option>
@@ -174,6 +174,12 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewBooks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewBooks" type="462c0819:PsiDirectoryNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewBooks" type="b2602c69:ProjectViewProjectNode" />
@@ -367,12 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563449124486</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="frontending">
+      <created>1563455593624</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563455593624</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24181548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -425,7 +437,8 @@
     <MESSAGE value="login solved here" />
     <MESSAGE value="GITHUB DONE" />
     <MESSAGE value="master" />
-    <option name="LAST_COMMIT_MESSAGE" value="master" />
+    <MESSAGE value="frontending" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontending" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NewBooks/test.py" />
@@ -552,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookstore/templates/Store.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -621,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewBooks/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="163" column="70" selection-start-line="163" selection-start-column="70" selection-end-line="163" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NewBooks/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -641,10 +640,24 @@
     <entry file="file://$PROJECT_DIR$/bookstore/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewBooks/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookstore/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
