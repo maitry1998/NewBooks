@@ -1,17 +1,28 @@
-{% load i18n %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% trans "Register for an account" %}{% endblock %}</title>
+    <title>{% block title %}Welcomeore{% endblock %}</title>
 </head>
-<body>
-
-
-
-
+<body background="{% static 'base/img/header_full.jpg' %}">
 {% block content %}
+{% if request.user.is_authenticated %}
+    <h4>Welcome, {% if request.user.first_name %}
+        {{request.user.first_name}}
+        {% else %}
+        {{request.user.username}}
+        {% endif %}!
+    </h4>
+{% else %}
+Welcome mysterious person
+<a href="{% url 'auth_login' %}">Logout</a>
+{% endif %}
+Welcome to the Mysterious world!! There are {{count}} books in stock.
+User Location : {{ request.session.location }}
+<a href="{% url 'auth_logout' %}">Logout</a>
 
 {% endblock %}
 </body>
 </html>
+
