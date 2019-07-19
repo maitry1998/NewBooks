@@ -20,7 +20,7 @@ from bookstore import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.firstdefination),
+    path('', views.index, name="index"),
     path('bookstore/' , include('bookstore.urls' ), name="bookstore"),
     path('accounts/' , include('registration.backends.default.urls' )),
     url(r'^oauth/', include('social_django.urls', namespace='social')),

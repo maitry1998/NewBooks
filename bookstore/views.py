@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Book
 
 # Create your views here.
-def firstdefination(request):
+def index(request):
     return render(request, "FirstHtml.html")
 
 def store(request):
