@@ -18,7 +18,7 @@ def store(request):
 
 
 def fiction(request):
-    return render(request,"/fiction.html")
+    return render(request,"fiction.html")
 
 
 
