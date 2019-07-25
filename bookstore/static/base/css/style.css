@@ -33,9 +33,9 @@ a:hover {
     color: #e6e6e6;
 }
 .md-md-8.col-md-offset-2.col-sm-12.maincontent {
-    left: 5%;
-    margin-right: 5%;
-    width: 90%;
+    left: 15%;
+    margin-right: 15%;
+    width: 70%;
 }
 @media (min-width: 992px)
 .col-md-offset-2 {
@@ -150,15 +150,19 @@ img.bg {
 
 /* Fix a couple things for mobile/low-res */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px)
+{
+
   img.bg {
     left: 50%;
     margin-left: -512px;   /* 50% */
   }
+
   .maincontent {
     width: 80%;
     left: 10%;
   }
+
 }
 
 /* Storefront styles */
@@ -261,5 +265,116 @@ img.bg {
 .cart_total {
                                 text-align: right;
                                 margin-top: 20px;
+}
+
+.storefront_book_display {
+
+    width: 200px;
+
+    display: inline-block;
+
+    text-align: center;
+
+}
+
+
+
+.storefront_book_title {
+
+    font-size: 14px;
+
+    display: block;
+
+    font-weight: bold;
+
+}
+
+
+
+.storefront_book_author {
+
+    font-size: 11px;
+
+    display: block;
+
+}
+
+
+/* Book detail styles */
+
+.detail_book_display {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+}
+
+.detail_book_img {
+
+    margin-bottom: 20px;
+
+}
+
+.detail_book_title {
+
+    font-size: 20px;
+
+    display: block;
+
+    font-weight: bold;
+
+}
+
+.detail_book_author {
+
+    font-size: 16px;
+
+    display: block;
+
+}
+
+.detail_book_description {
+
+    text-align: left;
+
+    margin-top: 20px;
+
+    width: 80%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+.detail_book_reviews_title {
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+    display:block;
+
+    font-weight: bold;
+
+}
+
+.detail_book_reviews_map {
+
+    width: 500px;
+
+    height: 300px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
 }
 
