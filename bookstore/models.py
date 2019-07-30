@@ -15,6 +15,7 @@ class Book(models.Model):
     publishdate=models.DateField(default=timezone.now)
     price=models.DecimalField(decimal_places=2,max_digits=8)
     stock=models.IntegerField(default=0)
+    cover_image=models.ImageField(upload_to='book/' , default='book/empty_cover.jpg')
 
 class Review(models.Model):
     book=models.ForeignKey(Book, on_delete=models.CASCADE)
