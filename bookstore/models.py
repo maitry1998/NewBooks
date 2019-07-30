@@ -30,8 +30,8 @@ class Cart(models.Model):
     order_date = models.DateField(null=True)
     payment_type = models.CharField(max_length=100, null=True)
     payment_id = models.CharField(max_length=100, null=True)
-
-    def add_to_cart(self, book_id):
+#this is called from views addtocart fun
+    def add_to_carts(self, book_id):
         book = Book.objects.get(pk=book_id)
         try:
             preexisting_order = BookOrder.objects.get(book=book, cart=self)

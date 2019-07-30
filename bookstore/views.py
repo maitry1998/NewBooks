@@ -22,11 +22,11 @@ def index(request):
     return render(request, "FirstHtml.html")
 
 def store(request):
-    books= Book.objects.all()
+    book= Book.objects.all()
     context = {
       # "count" : count,
       #   "page": "welcome to the mystrey books"
-        'books': books,
+        'book': book,
     }
     # request.session['location'] ="unknown"
     # if request.user.is_authenticated:
@@ -52,7 +52,7 @@ def book_detail(request, book_id):
 
 
 def add_to_cart(request, book_id):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         try:
             book = Book.objects.get(pk=book_id)
         except ObjectDoesNotExist:
@@ -65,13 +65,13 @@ def add_to_cart(request, book_id):
                     user=request.user
                 )
                 cart.save()
-            cart.add_to_cart(book_id)
+            cart.add_to_carts(book_id)
         return redirect('cart')
     else:
         return redirect('index')
 
 def remove_from_cart(request, book_id):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         try:
             book = Book.objects.get(pk=book_id)
         except ObjectDoesNotExist:
@@ -83,11 +83,10 @@ def remove_from_cart(request, book_id):
     else:
         return redirect('index')
 
-
 def cart(request):
-    if request.user.is_authenticated():
-        cart = Cart.objects.filter(user=request.user.id, active=True)
-        orders = BookOrder.objects.filter(cart=cart)
+    if request.user.is_authenticated:
+        cart1 = Cart.objects.get(user=request.user, active=True)
+        orders = BookOrder.objects.filter(cart=cart1)
         total = 0
         count = 0
         for order in orders:
@@ -101,5 +100,24 @@ def cart(request):
         return render(request, 'store/cart.html', context)
     else:
         return redirect('index')
+
+#
+# def cart(request):
+#     if request.user.is_authenticated:
+#         cart = Cart.objects.filter(user=request.user.id, active=True)
+#         orders = BookOrder.objects.filter(cart=cart)
+#         total = 0
+#         count = 0
+#         for order in orders:
+#             total += (order.book.price * order.quantity)
+#             count += order.quantity
+#         context = {
+#             'cart': orders,
+#             'total': total,
+#             'count': count,
+#         }
+#         return render(request, 'store/cart.html', context)
+#     else:
+#         return redirect('index')
 
 
