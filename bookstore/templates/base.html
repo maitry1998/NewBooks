@@ -6,12 +6,16 @@
 
 {% load bootstrap_themes %}
 
+{% load compress %}
+
 {% bootstrap_styles theme='simplex' type='min.css' %}
 
 {% block bootstrap3_extra_head %}
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
     <link href="{% static 'base/css/style.css' %}" rel="stylesheet" type="text/css"/>
+
 {% endblock %}
 
 {% block bootstrap3_title %}
