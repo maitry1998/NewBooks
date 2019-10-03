@@ -42,14 +42,9 @@ def fiction(request):
 
 
 def book_detail(request, book_id):
-
-
-  #  book = get_object_or_404(Book, id=book_id)
-
+    book=Book.objects.get(pk=book_id)
     context = {
-
-        'book': Book.objects.get(pk=book_id),
-
+        'book': book,
     }
     if request.user.is_authenticated:
         if request.method == "POST":
@@ -61,18 +56,13 @@ def book_detail(request, book_id):
                 text=form.cleaned_data.get('text')
                 )
                 new_review.save()
-            else:
-                if Review.objects.filter(user=request.user , book = context['book'].count() == 0):
-                    form=ReviewForm()
-                    context['form'] = form
-    context['reviews']=book.review_set.all
-
-
-
-
+        else:
+            if Review.objects.filter(user=request.user , book = context['book']).count() == 0:
+                form=ReviewForm()
+                context['form'] = form
+    context['reviews']=book.review_set.all()
 
     return render(request,'store/detail.html',context)
-
 
 def add_to_cart(request, book_id):
     if request.user.is_authenticated:

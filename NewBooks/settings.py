@@ -25,7 +25,7 @@ SECRET_KEY = '-*vi4l^x#a3%en^rev1%tc@grwb$%8=#!7n!7rd_q(5-!*gkaa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'bookstore',
-    'bootstrap3',
     'bootstrap_themes',
     'registration',
     #'social.apps.django_app.default',
