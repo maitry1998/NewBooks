@@ -25,7 +25,7 @@ SECRET_KEY = '-*vi4l^x#a3%en^rev1%tc@grwb$%8=#!7n!7rd_q(5-!*gkaa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'bookstore',
+    'bootstrap_themes',
     'registration',
     #'social.apps.django_app.default',
 ]
@@ -70,6 +71,7 @@ TEMPLATES = [
                 #'social.apps.django_app.context_processors.login_redirect',
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
+                'django.template.context_processors.media'
 
 
             ],
@@ -136,8 +138,8 @@ REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL="/bookstore/"
 INCLUDE_REGISTER_URL = True
 
-
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
 #emails
 EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST="smtp.gmail.com"
